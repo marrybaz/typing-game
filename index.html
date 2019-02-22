@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Igrica</title>
+    <!--  -->
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap/bootstrap.min.css" />
+    <script src="bootstrap/jquery.js"></script>
+    <script src="js/progressbar.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/radial.css" />
+
+</head>
+
+<body>
+
+    <div class="title-bar text-center">
+        <h2>Typing game</h2>
+    </div>
+
+    <div class="container text-center">
+
+        <form action="">
+            <div class="row">
+                <div class="col-md-12 prvi">
+                    <input type="radio" name="difficulty" value="5000" id="easy" checked>Easy
+                    <input type="radio" name="difficulty" value="3500" id="medium">Medium
+                    <input type="radio" name="difficulty" value="2000" id="hard">Hard
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 drugi">
+                    <input id="start" class="submit" type="button" value="Start game">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 treci">
+                    <h1 id="number"></h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 cetvrti">
+                    <input id="letter" class type="text" placeholder="Input Letter">
+                </div>
+            </div>
+        </form>
+
+        <div class="result">
+            <h5 class="score">SCORE</h5>
+            <h6 class="hit">HIT:<span id="hit">0</span></h6>
+            <h6 class="miss">MISS:<span id="miss">0</span></h6>
+            <h6 class="left">LEFT:<span id="left">26</span></h6>
+        </div>
+
+        <div class="grid">
+            <div id="1" class="grid-item">A (1)</div>
+            <div id="2" class="grid-item">B (2)</div>
+            <div id="3" class="grid-item">C (3)</div>
+            <div id="4" class="grid-item">D (4)</div>
+            <div id="5" class="grid-item">E (5)</div>
+            <div id="6" class="grid-item">F (6)</div>
+            <div id="7" class="grid-item">G (7)</div>
+            <div id="8" class="grid-item">H (8)</div>
+            <div id="9" class="grid-item">I (9)</div>
+            <div id="10" class="grid-item">J (10)</div>
+            <div id="11" class="grid-item">K (11)</div>
+            <div id="12" class="grid-item">L (12)</div>
+            <div id="13" class="grid-item">M (13)</div>
+            <div id="14" class="grid-item">N (14)</div>
+            <div id="15" class="grid-item">O (15)</div>
+            <div id="16" class="grid-item">P (16)</div>
+            <div id="17" class="grid-item">Q (17)</div>
+            <div id="18" class="grid-item">R (18)</div>
+            <div id="19" class="grid-item">S (19)</div>
+            <div id="20" class="grid-item">T (20)</div>
+            <div id="21" class="grid-item">U (21)</div>
+            <div id="22" class="grid-item">V (22)</div>
+            <div id="23" class="grid-item">W (23)</div>
+            <div id="24" class="grid-item">X (24)</div>
+            <div id="25" class="grid-item">Y (25)</div>
+            <div id="26" class="grid-item">Z (26)</div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.title-bar{
+    height: 30px;
+    background-color: aquamarine;
+}
+
+.title-bar h2{
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+.container{
+    position: relative;
+}
+
+form{
+    padding-top: 50px;
+}
+
+.result{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    text-align: right;
+}
+
+.score{
+    color: grey;
+}
+
+.hit{
+    color:green;
+}
+
+.miss{
+    color:red;
+}
+
+.left{
+    color:black;
+}
+
+.prvi, .drugi, .treci, .cetvrti{
+    padding: 20px;
+}
+
+.submit{
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid rgb(47, 7, 110);
+    border-radius:5px;
+    color:rgb(47, 7, 110);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    padding: 10px;
+}
+
+.grid-item {
+   
+    padding: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+
