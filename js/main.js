@@ -1,9 +1,9 @@
 let d = id => document.getElementById(id);
 let c = id => document.getElementsByClassName(id);
 
-
 let niz;
 let tajmer;
+let pritisnuto = false;
 
 d('start').addEventListener('click', function () {
     // d('start').setAttribute('disabled', 'disabled');
@@ -21,6 +21,7 @@ d('start').addEventListener('click', function () {
     } else {
         clearInterval(tajmer);
         alert("Igra je prekinuta");
+        d('start').value === 'Start game'
         d('left').innerHTML = 0;
         d('start').removeAttribute('disabled');
         d('easy').removeAttribute('disabled');
@@ -31,10 +32,14 @@ d('start').addEventListener('click', function () {
 
 })
 
-d('letter').addEventListener('keyup', function () {
-    let key = d('letter').value.toUpperCase();
+d('letter').addEventListener('keypress', function (e) {
+    if (pritisnuto) {
+        return;
+    }
+    pritisnuto = true;
+    let key = e.key.toUpperCase();
     let idx = key.charCodeAt(0) - 64;
-    let num =parseInt(d('number').innerText);
+    let num = parseInt(d('number').innerText);
     d('letter').setAttribute('readonly', 'readonly');
     d('letter').value = '';
     console.log('pritisnuto je ' + key + ' sto je kod ' + idx);
@@ -58,9 +63,20 @@ function initData() {
     for (let i = 1; i <= 26; i++) {
         d(i).classList.remove('miss');
         d(i).classList.remove('hit');
+        d(i).classList.remove('pass');
     }
 }
 function pickNumber() {
+    if (pritisnuto) {
+        pritisnuto = false;
+    } else {
+        let num = parseInt(d('number').innerText);
+        if (num) {
+            //nije reagovao
+            d('miss').innerText = (parseInt(d('miss').innerText) + 1);
+            d(num).classList.add('pass');
+        }
+    }
     d('letter').removeAttribute('readonly');
     let selIdx = Math.floor(Math.random() * niz.length);
     let selVal = niz[selIdx];
